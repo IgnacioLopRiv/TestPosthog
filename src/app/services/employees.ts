@@ -15,8 +15,8 @@ export class EmployeesService {
   }
 
   obtenerGarzones(): Observable<any> {
-  return this.http.get('http://localhost:3000/garzones/garzones');
-}
+    return this.http.get(`${this.API_URL}/garzones`);
+  }
   eliminarGarzon(id: number): Observable<any> {
     return this.http.delete(`${this.API_URL}/garzon/${id}`);
   }
